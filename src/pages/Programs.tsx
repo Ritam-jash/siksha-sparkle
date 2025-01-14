@@ -1,38 +1,109 @@
 import Navbar from "@/components/Navbar";
-import { BookOpen, GraduationCap, Award } from "lucide-react";
+import { BookOpen, GraduationCap, Award, Users, Target, Briefcase } from "lucide-react";
 
 const Programs = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h1 className="text-4xl font-bold text-center mb-12">Our Programs</h1>
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Programs</h1>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Comprehensive educational programs designed to shape your future
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-              <BookOpen className="w-6 h-6 text-primary" />
+          {programs.map((program, index) => (
+            <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                {program.icon}
+              </div>
+              <h3 className="text-xl font-semibold mb-4">{program.title}</h3>
+              <p className="text-gray-600 mb-6">{program.description}</p>
+              <ul className="space-y-3">
+                {program.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-center text-gray-600">
+                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h3 className="text-xl font-semibold mb-4">Career Counseling</h3>
-            <p className="text-gray-600">Comprehensive career guidance sessions with expert counselors.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-              <GraduationCap className="w-6 h-6 text-primary" />
-            </div>
-            <h3 className="text-xl font-semibold mb-4">Admission Assistance</h3>
-            <p className="text-gray-600">Complete support for college admissions process.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-              <Award className="w-6 h-6 text-primary" />
-            </div>
-            <h3 className="text-xl font-semibold mb-4">Skill Development</h3>
-            <p className="text-gray-600">Professional skill enhancement programs.</p>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
+
+const programs = [
+  {
+    title: "Career Counseling",
+    description: "Expert guidance to help you choose the right career path",
+    icon: <Target className="w-6 h-6 text-primary" />,
+    features: [
+      "Personality Assessment",
+      "Career Mapping",
+      "Industry Insights",
+      "One-on-One Sessions"
+    ]
+  },
+  {
+    title: "Admission Assistance",
+    description: "Complete support for college admissions process",
+    icon: <GraduationCap className="w-6 h-6 text-primary" />,
+    features: [
+      "College Selection",
+      "Application Process",
+      "Document Preparation",
+      "Interview Preparation"
+    ]
+  },
+  {
+    title: "Skill Development",
+    description: "Enhance your professional capabilities",
+    icon: <Award className="w-6 h-6 text-primary" />,
+    features: [
+      "Soft Skills Training",
+      "Technical Workshops",
+      "Leadership Programs",
+      "Industry Certifications"
+    ]
+  },
+  {
+    title: "Study Abroad",
+    description: "Guidance for international education opportunities",
+    icon: <BookOpen className="w-6 h-6 text-primary" />,
+    features: [
+      "Country Selection",
+      "University Applications",
+      "Visa Assistance",
+      "Pre-departure Briefing"
+    ]
+  },
+  {
+    title: "Placement Support",
+    description: "Comprehensive placement assistance",
+    icon: <Briefcase className="w-6 h-6 text-primary" />,
+    features: [
+      "Resume Building",
+      "Interview Training",
+      "Job Matching",
+      "Industry Connect"
+    ]
+  },
+  {
+    title: "Mentorship Program",
+    description: "Learn from industry experts",
+    icon: <Users className="w-6 h-6 text-primary" />,
+    features: [
+      "Industry Mentors",
+      "Regular Sessions",
+      "Project Guidance",
+      "Network Building"
+    ]
+  }
+];
 
 export default Programs;
