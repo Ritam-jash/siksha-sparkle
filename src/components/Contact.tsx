@@ -2,8 +2,8 @@ import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from "luc
 
 const Contact = () => {
   return (
-    <div id="contact" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900">Contact Us</h2>
           <p className="mt-4 text-lg text-gray-600">Get in touch with our expert counselors</p>
@@ -44,27 +44,9 @@ const Contact = () => {
                 </p>
               </div>
             </div>
-
-            <div className="pt-8">
-              <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-              <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors">
-                  <Facebook className="w-5 h-5 text-primary" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors">
-                  <Instagram className="w-5 h-5 text-primary" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors">
-                  <Linkedin className="w-5 h-5 text-primary" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors">
-                  <Twitter className="w-5 h-5 text-primary" />
-                </a>
-              </div>
-            </div>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             <form className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
@@ -97,20 +79,63 @@ const Contact = () => {
                 Send Message
               </button>
             </form>
-
-            <div className="h-[300px] w-full rounded-lg overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8219652911444!2d88.84742631496824!3d23.232893784850893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f872bd7a1f2685%3A0x27b89c9c3c729bae!2sTalk%20of%20the%20Town!5e0!3m2!1sen!2sin!4v1647940435183!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-              ></iframe>
-            </div>
           </div>
         </div>
       </div>
+
+      {/* Enhanced Footer */}
+      <footer className="bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">About Us</h3>
+              <p className="text-gray-300">
+                Siksha Education is a leading educational consulting firm helping students achieve their academic goals since 2013.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Programs</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Courses</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Admissions</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4">Programs</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">MBA</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">PGDM</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">BBA</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">BCA</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4">Connect With Us</h3>
+              <div className="flex space-x-4 mb-4">
+                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                  <Facebook className="w-6 h-6" />
+                </a>
+                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                  <Instagram className="w-6 h-6" />
+                </a>
+                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                  <Linkedin className="w-6 h-6" />
+                </a>
+                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                  <Twitter className="w-6 h-6" />
+                </a>
+              </div>
+              <p className="text-gray-300">info.successsiksha@gmail.com</p>
+              <p className="text-gray-300">+91 7866842066</p>
+            </div>
+          </div>
+          <div className="border-t border-gray-600 mt-8 pt-8 text-center">
+            <p className="text-gray-300">&copy; 2024 Siksha Education. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
