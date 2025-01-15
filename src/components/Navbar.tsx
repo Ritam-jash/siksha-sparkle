@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full bg-[url('/lovable-uploads/c733d67a-12d1-44b6-bab1-24a4873ba3eb.png')] bg-cover bg-center shadow-lg z-50 backdrop-blur-sm">
+    <nav className="fixed w-full bg-blue-900 shadow-lg z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex-shrink-0 flex items-center">

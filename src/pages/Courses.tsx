@@ -15,7 +15,6 @@ const Courses = () => {
           </p>
         </div>
 
-        {/* Course Types Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
             <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
@@ -28,6 +27,11 @@ const Courses = () => {
               <li>• BCA - Bachelor of Computer Applications</li>
               <li>• BA Economics</li>
               <li>• BSc Computer Science</li>
+              <li>• BA English</li>
+              <li>• BSc Mathematics</li>
+              <li>• BA Psychology</li>
+              <li>• BBA Aviation Management</li>
+              <li>• BSc Data Science</li>
             </ul>
           </div>
 
@@ -42,10 +46,15 @@ const Courses = () => {
               <li>• MCA - Master of Computer Applications</li>
               <li>• M.Com - Master of Commerce</li>
               <li>• MA Economics</li>
+              <li>• MSc Computer Science</li>
+              <li>• MA English</li>
+              <li>• MSc Data Analytics</li>
+              <li>• MBA Digital Marketing</li>
+              <li>• MBA Healthcare Management</li>
             </ul>
           </div>
         </div>
-        
+
         <Tabs defaultValue="kolkata" className="w-full">
           <TabsList className="grid w-full max-w-[600px] grid-cols-3 mx-auto mb-8">
             <TabsTrigger value="kolkata" className="text-lg">Kolkata</TabsTrigger>
