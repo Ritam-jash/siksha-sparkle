@@ -6,13 +6,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 shadow-lg z-50">
+    <nav className="fixed w-full bg-[url('/lovable-uploads/c733d67a-12d1-44b6-bab1-24a4873ba3eb.png')] bg-cover bg-center shadow-lg z-50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center space-x-3">
               <img src="/lovable-uploads/ebfc23ce-cd87-4310-9a66-e442294bb011.png" alt="Siksha Education" className="h-12 w-12" />
-              <span className="text-2xl font-bold text-white">
+              <span className="text-2xl font-bold text-white bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 bg-clip-text text-transparent">
                 Siksha Education
               </span>
             </Link>

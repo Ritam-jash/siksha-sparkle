@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { BookOpen, GraduationCap, Award, Users, Target, Briefcase } from "lucide-react";
 
 const Programs = () => {
@@ -33,6 +34,7 @@ const Programs = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

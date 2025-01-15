@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Award, BookOpen, Users, Building2, GraduationCap, Trophy } from "lucide-react";
 
 const About = () => {
@@ -90,6 +91,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

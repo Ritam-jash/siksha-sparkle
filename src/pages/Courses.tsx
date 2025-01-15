@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { GraduationCap, Clock, BookOpen } from "lucide-react";
+import { GraduationCap, MapPin, IndianRupee } from "lucide-react";
 
 const Courses = () => {
   return (
@@ -10,54 +11,77 @@ const Courses = () => {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Courses</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Explore our comprehensive range of undergraduate and postgraduate programs
+            Explore our comprehensive range of MBA and PGDM programs
           </p>
         </div>
         
-        <Tabs defaultValue="ug" className="w-full">
-          <TabsList className="grid w-full max-w-[400px] grid-cols-2 mx-auto mb-8">
-            <TabsTrigger value="ug" className="text-lg">Undergraduate</TabsTrigger>
-            <TabsTrigger value="pg" className="text-lg">Postgraduate</TabsTrigger>
+        <Tabs defaultValue="kolkata" className="w-full">
+          <TabsList className="grid w-full max-w-[600px] grid-cols-3 mx-auto mb-8">
+            <TabsTrigger value="kolkata" className="text-lg">Kolkata</TabsTrigger>
+            <TabsTrigger value="delhi" className="text-lg">Delhi</TabsTrigger>
+            <TabsTrigger value="bangalore" className="text-lg">Bangalore</TabsTrigger>
           </TabsList>
           
-          <TabsContent value="ug" className="space-y-8">
+          <TabsContent value="kolkata" className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {ugCourses.map((course, index) => (
+              {kolkataCourses.map((course, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                     <GraduationCap className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-4">{course.title}</h3>
-                  <p className="text-gray-600 mb-4">{course.description}</p>
-                  <div className="flex items-center text-gray-500 mb-4">
-                    <Clock className="w-4 h-4 mr-2" />
-                    <span>{course.duration}</span>
+                  <h3 className="text-xl font-semibold mb-2">{course.college}</h3>
+                  <div className="flex items-center text-gray-600 mb-2">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    <span>{course.location}</span>
                   </div>
-                  <div className="flex items-center text-gray-500">
-                    <BookOpen className="w-4 h-4 mr-2" />
-                    <span>{course.specializations} specializations</span>
+                  <p className="text-gray-600 mb-4">{course.program}</p>
+                  <div className="flex items-center text-green-600 font-semibold">
+                    <IndianRupee className="w-4 h-4 mr-1" />
+                    <span>{course.fees}</span>
                   </div>
                 </div>
               ))}
             </div>
           </TabsContent>
           
-          <TabsContent value="pg" className="space-y-8">
+          <TabsContent value="delhi" className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {pgCourses.map((course, index) => (
+              {delhiCourses.map((course, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                     <GraduationCap className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-4">{course.title}</h3>
-                  <p className="text-gray-600 mb-4">{course.description}</p>
-                  <div className="flex items-center text-gray-500 mb-4">
-                    <Clock className="w-4 h-4 mr-2" />
-                    <span>{course.duration}</span>
+                  <h3 className="text-xl font-semibold mb-2">{course.college}</h3>
+                  <div className="flex items-center text-gray-600 mb-2">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    <span>{course.location}</span>
                   </div>
-                  <div className="flex items-center text-gray-500">
-                    <BookOpen className="w-4 h-4 mr-2" />
-                    <span>{course.specializations} specializations</span>
+                  <p className="text-gray-600 mb-4">{course.program}</p>
+                  <div className="flex items-center text-green-600 font-semibold">
+                    <IndianRupee className="w-4 h-4 mr-1" />
+                    <span>{course.fees}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </TabsContent>
+
+          <TabsContent value="bangalore" className="space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {bangaloreCourses.map((course, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <GraduationCap className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{course.college}</h3>
+                  <div className="flex items-center text-gray-600 mb-2">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    <span>{course.location}</span>
+                  </div>
+                  <p className="text-gray-600 mb-4">{course.program}</p>
+                  <div className="flex items-center text-green-600 font-semibold">
+                    <IndianRupee className="w-4 h-4 mr-1" />
+                    <span>{course.fees}</span>
                   </div>
                 </div>
               ))}
@@ -65,86 +89,63 @@ const Courses = () => {
           </TabsContent>
         </Tabs>
       </div>
+      <Footer />
     </div>
   );
 };
 
-const ugCourses = [
+const kolkataCourses = [
   {
-    title: "Bachelor of Technology (B.Tech)",
-    description: "Comprehensive engineering program with various specializations",
-    duration: "4 years",
-    specializations: 8
+    college: "BIBS",
+    location: "18D, Lake View Rd, Kolkata",
+    program: "MBA - Marketing/Finance/HR/Digital Marketing",
+    fees: "698000"
   },
   {
-    title: "Bachelor of Business Administration (BBA)",
-    description: "Learn business management and entrepreneurial skills",
-    duration: "3 years",
-    specializations: 5
+    college: "St. Xaviers University",
+    location: "Action Area III B, Newtown",
+    program: "MBA",
+    fees: "1080000"
   },
   {
-    title: "Bachelor of Science (B.Sc)",
-    description: "Strong foundation in scientific principles and research",
-    duration: "3 years",
-    specializations: 6
+    college: "IMI",
+    location: "2/4 C Judges Court Rd, Kolkata",
+    program: "PGDM - Marketing/Finance/HRM",
+    fees: "1450000"
   },
-  {
-    title: "Bachelor of Arts (BA)",
-    description: "Explore humanities and social sciences",
-    duration: "3 years",
-    specializations: 7
-  },
-  {
-    title: "Bachelor of Commerce (B.Com)",
-    description: "Study commerce, accounting, and finance",
-    duration: "3 years",
-    specializations: 4
-  },
-  {
-    title: "Bachelor of Computer Applications (BCA)",
-    description: "Learn computer science and application development",
-    duration: "3 years",
-    specializations: 3
-  }
+  // Add more courses from the images
 ];
 
-const pgCourses = [
+const delhiCourses = [
   {
-    title: "Master of Technology (M.Tech)",
-    description: "Advanced engineering studies with research focus",
-    duration: "2 years",
-    specializations: 10
+    college: "IILM",
+    location: "3, Lodhi Road, New Delhi",
+    program: "MBA - Marketing/Finance/HR",
+    fees: "1200000"
   },
   {
-    title: "Master of Business Administration (MBA)",
-    description: "Advanced business management and leadership",
-    duration: "2 years",
-    specializations: 8
+    college: "FMS",
+    location: "University of Delhi, Delhi",
+    program: "MBA",
+    fees: "200000"
+  },
+  // Add more courses from the images
+];
+
+const bangaloreCourses = [
+  {
+    college: "IIM Bangalore",
+    location: "Bannerghatta Road, Bangalore",
+    program: "MBA",
+    fees: "2500000"
   },
   {
-    title: "Master of Science (M.Sc)",
-    description: "Advanced scientific research and specialization",
-    duration: "2 years",
-    specializations: 6
+    college: "Christ University",
+    location: "Hosur Road, Bangalore",
+    program: "MBA",
+    fees: "800000"
   },
-  {
-    title: "Master of Arts (MA)",
-    description: "Advanced studies in humanities and social sciences",
-    duration: "2 years",
-    specializations: 5
-  },
-  {
-    title: "Master of Commerce (M.Com)",
-    description: "Advanced commerce and financial studies",
-    duration: "2 years",
-    specializations: 4
-  },
-  {
-    title: "Master of Computer Applications (MCA)",
-    description: "Advanced computer applications and development",
-    duration: "2 years",
-    specializations: 5
-  }
+  // Add more courses from the images
 ];
 
 export default Courses;
