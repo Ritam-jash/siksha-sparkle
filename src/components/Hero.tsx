@@ -2,9 +2,10 @@ import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const images = [
-  "/lovable-uploads/44b36013-108a-4573-a441-be762bf9c5b6.png",
-  "/lovable-uploads/8b68eac9-334e-41b7-9917-6e1896d65325.png",
-  // Add more images as needed
+  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2086&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2070&auto=format&fit=crop",
 ];
 
 const Hero = () => {
@@ -27,7 +28,7 @@ const Hero = () => {
             currentImage === index ? "opacity-100" : "opacity-0"
           }`}
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${img})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${img})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
