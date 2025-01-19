@@ -4,15 +4,15 @@ import { Award, BookOpen, Users, Building2, GraduationCap, Trophy } from "lucide
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
       <Navbar />
       <div className="pt-20">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
+        {/* Hero Section - Updated with new gradient */}
+        <div className="bg-gradient-to-r from-teal-600 to-teal-400 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl font-bold mb-4">About Siksha Education</h1>
-              <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-100 max-w-3xl mx-auto">
                 Empowering students with expert guidance and support since 2013. ISO 9001:2015 certified institution dedicated to transforming education.
               </p>
             </div>

@@ -6,7 +6,7 @@ const ProgramsHero = () => {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: `url(https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop)`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -16,7 +16,7 @@ const ProgramsHero = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-white">
             Explore Our Educational Programs
           </h1>
-          <p className="text-lg text-gray-100 max-w-2xl mx-auto">
+          <p className="text-lg text-white max-w-2xl mx-auto">
             Discover comprehensive programs designed to shape your future and advance your career
           </p>
           <button className="bg-white text-teal-600 px-8 py-3 rounded-md hover:bg-gray-100 transition-colors flex items-center gap-2 mx-auto">

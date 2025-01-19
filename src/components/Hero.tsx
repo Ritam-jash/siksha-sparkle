@@ -43,10 +43,10 @@ const Hero = () => {
             Empowering students with personalized career counseling and admission guidance to help them achieve their academic goals.
           </p>
           <div className="flex gap-4 justify-center">
-            <button className="bg-primary text-white px-8 py-3 rounded-md hover:bg-primary-hover transition-colors flex items-center gap-2">
+            <button className="bg-teal-600 text-white px-8 py-3 rounded-md hover:bg-teal-700 transition-colors flex items-center gap-2">
               Get Started <ArrowRight size={20} />
             </button>
-            <button className="bg-white text-primary px-8 py-3 rounded-md border-2 border-primary hover:bg-gray-50 transition-colors">
+            <button className="bg-white text-teal-600 px-8 py-3 rounded-md border-2 border-teal-600 hover:bg-gray-50 transition-colors">
               Learn More
             </button>
           </div>
