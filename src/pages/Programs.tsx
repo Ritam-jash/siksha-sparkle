@@ -1,31 +1,33 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProgramsHero from "@/components/ProgramsHero";
 import { BookOpen, GraduationCap, Award, Users, Target, Briefcase } from "lucide-react";
 
 const Programs = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
       <Navbar />
+      <ProgramsHero />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Programs</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h1 className="text-4xl font-bold text-teal-800 mb-4">Our Programs</h1>
+          <p className="text-lg text-teal-600 max-w-2xl mx-auto">
             Comprehensive educational programs designed to shape your future
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {programs.map((program, index) => (
-            <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+            <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border-t-4 border-teal-600">
+              <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mb-6">
                 {program.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-4">{program.title}</h3>
-              <p className="text-gray-600 mb-6">{program.description}</p>
+              <h3 className="text-xl font-semibold mb-4 text-teal-800">{program.title}</h3>
+              <p className="text-teal-600 mb-6">{program.description}</p>
               <ul className="space-y-3">
                 {program.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-gray-600">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                  <li key={idx} className="flex items-center text-teal-700">
+                    <span className="w-2 h-2 bg-teal-600 rounded-full mr-3"></span>
                     {feature}
                   </li>
                 ))}
