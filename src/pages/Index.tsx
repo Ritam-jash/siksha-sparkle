@@ -7,12 +7,14 @@ import Testimonials from "@/components/Testimonials";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-teal-50">
       <Navbar />
       <Hero />
-      <Services />
-      <About />
-      <Testimonials />
+      <div className="bg-teal-50">
+        <Services />
+        <About />
+        <Testimonials />
+      </div>
       <Footer />
     </div>
   );

@@ -6,7 +6,7 @@ const ProgramsHero = () => {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 128, 128, 0.8), rgba(0, 128, 128, 0.8)), url(https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop)`,
+          backgroundImage: `url(https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
