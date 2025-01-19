@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import Map from "./Map";
 
 const Contact = () => {
   return (
@@ -80,6 +81,10 @@ const Contact = () => {
               </button>
             </form>
           </div>
+        </div>
+
+        <div className="mt-16">
+          <Map />
         </div>
       </div>
     </div>
